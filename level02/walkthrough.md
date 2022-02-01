@@ -1,3 +1,15 @@
+# Format String Exploit
+
+see source.c
+
+## Analysis
+
+First 64bit elf file !
+For this one we instantly notice a format string exploit because of the call of printf with a variable. We also notice that the flag is on the stack inside the variable 'flag' so we could just print all the stack and hopefully see our flag !
+First thing to do is locate the flag bytes on the stack, so the first thing we did was to print 'B' as password since the flag is located after the password input on the stack. Then just print everything as hexa and translate bytes into char to get the flag !
+
+(another way to do this is to get the pointer of flag and set it on B, then print '%s' on the flag pointer.)
+
 ```
 level02@OverRide:~$ (python -c "print('%p.' * 20 + '%lx %lx %lx %lx %lx %lx')"; python -c "print('B' * 100)") | $PWD/level02 
 ===== [ Secure Access System v1.0 ] =====
