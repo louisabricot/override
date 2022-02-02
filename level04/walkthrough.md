@@ -21,7 +21,7 @@ exit();
 ()[http://faculty.nps.edu/cseagle/assembly/sys_call.html]
 The code of the payload is available in resources/payload.s and was compiling like this:
 ```
-nasm -felf32 test.s && ld -m elf_i386 test.o -o a.out
+nasm -felf32 payload.s && ld -m elf_i386 payload.o -o a.out
 ```
 Then we just xxd and get what we needed, and do a little payload with a jump at the end (at the address of eip, that jump on the payload):
 
