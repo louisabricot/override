@@ -38,6 +38,8 @@ Another problem from the code with disassemble: the program is putting all upper
 
 see `resources/payload.s` to see the achieved payload.
 
+Note that we probably could have avoided this problem by putting the payload at the end of the format string and null terminated the string before to avoid the loop with strlen checking but we doesn't think about it at this time since we were very tired. (But we manage to do it anyway so....!)
+
 ## Exploit
 
 After a some deep problem with stack localization in/or out gdb (address weren't the same), we manage to get a good payload by analysing the pointer that we were printing, for example:
