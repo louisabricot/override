@@ -38,8 +38,16 @@ int store_number(char *s)
 	unsigned int n = get_unum(); //0x10
 	printf(" Index: ");
 	unsigned int i = get_unum(); //0xc
-	if ((i - (((i * 0xaaaaaaab) >> 1) * 3)) == 0 || (n >> 24) == 0xb7)
+	if ((i - (((i * 0xaaaaaaab) >> 1) * 3)) == 0 || (n >> 24) == 0xb7) // i % 114 == 0
 	{
+/*
+python
+>>> 0b01000000000000000000000001110010
+1073741938
+--> 4159090384 (system) print system
+116 (116 << 2 = 464 = 0x1d0 (sub esp, 0x1d0))
+--> 4160264172 (/bin/sh) find {addresse de system}, +999999999, "/bin/sh"
+*/
 		puts(" *** ERROR! ***");
 		puts("   This index is reserved for wil!");
 		puts(" *** ERROR! ***");
