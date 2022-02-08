@@ -4,9 +4,8 @@ void		log_wrapper(FILE *fs, char *str, char *filename)
 	char buffer[255]; // 0x110
 
 	strcpy(buffer, str);
-	strlen() strlen(buffer);
 	snprintf(buffer + strlen(buffer), 254 - strlen(buffer), filename);
-	strcspn(buffer, "\n");
+	buffer[strcspn(buffer, "\n")] = 0;
 	fprintf(fs, "LOG: %s\n", buffer);
 }
 
