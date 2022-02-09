@@ -6,7 +6,6 @@ _start:
   xor ecx, ecx
   mul ecx
 
-
 open:
   push 5
   pop eax
@@ -43,4 +42,3 @@ exit:
   push 1
   pop eax
   int 0x80
-

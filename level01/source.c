@@ -5,7 +5,6 @@ void verify_user_pass(char *password)
 	return strncmp(password, "admin", 5);
 }
 
-
 void verify_user_name()
 {
 	puts("verifying username...\n");
@@ -30,7 +29,6 @@ int main(void)
 	}
 	puts("Enter password:");
 	fgets(buffer, 100,stdin);
-	
 	if (verify_user_pass(buffer) != 0)
 	{
 		puts("nope, incorrect password...\n");

